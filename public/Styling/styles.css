@@ -1,0 +1,492 @@
+/*Below are element type formattings*/
+
+body{
+    font-family: "Kode Mono", sans-serif;
+    background-color: rgb(39, 41, 58);
+    color: white;
+    overflow-x: hidden;
+}
+
+button{
+    width: 200px;
+    height: 120px;
+    font-size: x-large;
+    transition: transform 0.5s, color 0.5s, background-color 0.5s;
+    background-color: darkslateblue;
+    color: aliceblue;
+    font-weight: bolder;
+    border-radius: 30px;
+    text-shadow: black;
+    font-family: "Kode Mono";
+}
+
+button:hover{
+    transform: translateY(-10%);
+    color: white;
+    background-color: rgb(95, 83, 173);
+    transform-origin: center;
+}
+
+a{
+    color: lightblue;
+    transition: color 0.5s;
+}
+
+a:hover{
+    color: rgb(239, 193, 108);
+}
+
+select{
+    background-color: lightblue;
+    height: 35px;
+    width: 140px;
+    font-weight: bolder;
+    color: rgb(39, 41, 58);
+    border-radius: 15px;
+}
+
+table{
+    color:rgb(39, 41, 58);
+    font-family: "Anta";
+    font-size: larger;
+    font-weight: bolder;
+    background-color: rgb(39, 41, 58);
+}
+
+thead{
+    color: lightblue;
+}
+
+th{
+    border: lightblue solid 1px;
+}
+
+td{
+    border: rgb(39, 41, 58) solid 1px;
+    transition: color 0.15s, background-color 0.15s;
+}
+
+td:hover{
+    background-color: rgb(39, 41, 58);
+    color: lightblue;
+    border-radius: 5px;
+}
+
+hr{
+    width: 80vw;
+    height: 3px;
+    background-color: white;
+}
+
+/*Below are class formattings*/
+
+.header-hr{
+    width: 95vw;
+}
+
+.header-flex-container{
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.button-flex-container{
+    display: flex;
+    justify-content: space-evenly;
+    width:fit-content;
+    height:auto;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 50px;
+}
+
+.header-flex-item{
+    width:max-content;
+    z-index: 1;
+}
+
+.description-flex{
+    display: flex;
+    justify-content: center;
+}
+
+.tableResponsive{
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* Allows for momentum-based scrolling on mobile devices */
+    margin: 0 auto;
+}
+
+.date-input{
+    height:50px;
+    font-size: larger;
+    background-color: rgb(39, 41, 58);
+    color:aliceblue;
+    font-family: "Nunito";
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.date-input:hover{
+    background-color: rgb(67, 70, 95);
+    color: white;
+    transform: translateY(-5px);
+}
+
+.footerLink{
+    font-size: larger;
+    margin-right: -100px;
+}
+
+.headerLink{
+    font-size: larger;
+    margin-left: 3vw;
+}
+
+.aboutSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50vw;
+    margin-left: auto;
+    margin-right: auto;
+    border: aliceblue solid 5px;
+}
+
+.aboutText{
+    width: 65vw;
+    text-align: center;
+    width: inherit;
+}
+
+.flex-button{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.player-flex-box{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-left :10vw;
+    padding-right :10vw;
+    padding-top: 5vh;
+    padding-bottom: 20vh;
+}
+
+.playerImageBox{
+    width: auto;
+    transition: transform 0.3s, color 0.3s, background-color 0.3s;
+    border-radius: 25px;
+    padding: 15px;
+}
+
+.playerImageBox:hover{
+    background-color: rgba(55, 57, 81,0.5);
+    color: lightblue;
+    transform: translateY(-5px);
+}
+
+.playerImage{
+    width: 300px;
+    opacity: 75%;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.playerImage:hover{
+    transform: translateY(-5px);
+    opacity: 1;
+}
+
+.playerCaption{
+    text-align: center;
+    font-size: x-large;
+}
+
+.profileCaption{
+    font-size:38pt;
+}
+
+.profileFlexContainer{
+    display: flex;
+    justify-content: space-between;
+    height:max-content;
+}
+
+.profileFlexDescription{
+    text-align: center;
+    font-family: "Anta";
+    font-size: x-large;
+    height: max-content;
+}
+
+.profileFlexNumber{
+    font-size: 150px;
+    color:rgb(239, 193, 108);
+    line-height: 0;
+    opacity: 70%;
+    margin-right: 5vw;
+    position: fixed;
+    z-index: -1;
+    margin-left: 10vw;
+    margin-top: 20vh;
+}
+
+.playerBackground{
+    height: 450px;
+    margin-top: -100px;
+}
+
+.profileLogo{
+    margin-top: 20px;
+    margin-right: 90px;
+}
+
+.centerHeader{
+    text-align:center;
+}
+
+.tableHeader{
+    padding-left: 40px;
+}
+
+.flex-box{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.flex-item{
+    width:33vw;
+    min-width: 450px;
+}
+
+.graphImage{
+    width:29vw;
+    min-width: 450px;
+}
+
+.analysisImage{
+    width:29vw;
+    padding-top: 50px;
+    min-width: 450px;
+}
+
+#graphDescription{
+    background-color: rgba(255,255,255,0.15);
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 50px;
+}
+
+.graph{
+    width:650px;
+    min-width: 20vw;
+    padding: 35px;
+}
+
+.teamImageBox{
+    height:300px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.teamImageBox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.teamImage{
+    opacity: 75%;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.teamImage:hover{
+    transform: translateY(-5px);
+    opacity: 1;
+}
+
+.teamLogo{
+    width: 800px;
+}
+
+.halfHR {
+    width: 25vw;
+}
+
+.inlineBlock{
+    display: inline-block;
+}
+
+.pageHyperlink{
+    background-color: rgba(255,255,255,0.1);
+    width:fit-content;
+    padding:20px;
+    border-radius: 30px;
+    text-align: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+}
+
+.pageHyperlink:hover{
+    background-color: rgba(216, 141, 76, 0.3);
+    transform: translateY(-5px);
+}
+
+.profileFlexItem{
+    width: 20vw;
+    align-content: center;
+    text-align: center;
+}
+
+
+.better { background-color: green; color: white; }
+.worse { background-color: red; color: white; }
+
+
+
+
+/*Below are id formattings*/
+
+#profileLogo{
+    transition: transform 5s;
+    height: 140px;
+    margin-right: -75px;
+}
+
+#profileLogo:hover{
+    transform: rotate(1080deg);
+}
+
+#header-flex-1{
+    margin-left: 2.5vw;
+}
+
+#header-flex-3{
+    margin-right: 2.5vw;
+}
+
+#name{
+    font-size: xx-large;
+}
+
+#propic{
+    transition: transform 5s;
+    height: 150px;
+}
+
+#propic:hover{
+    transform: rotate(1080deg);
+}
+
+#background{
+    opacity: 10%;
+    position: fixed;
+    z-index: -1;
+    transform: rotate(45deg);
+    margin-left: -500px;
+}
+
+#background3{
+    opacity: 10%;
+    position: fixed;
+    z-index: -1;
+    transform: rotate(45deg);
+    margin-left: -250px;
+    margin-top: -200px;
+}
+
+#nbaBackground{
+    opacity: 10%;
+    position: fixed;
+    z-index: -1;
+    transform: rotate(15deg);
+    margin-left: 20vw;
+    margin-right: 10vw;
+    margin-top: -100px;
+}
+
+#nbaLogo{
+    width: 1000px;
+}
+
+#background2{
+    opacity: 100%;
+    position: fixed;
+    z-index: -1;
+    margin-left: 900px;
+    margin-top: 650px;
+}
+
+#backgroundPlayer{
+    opacity: 55%;
+    height: 300px;
+    position: fixed;
+    z-index: -1;
+    margin-left: 60vw;
+    margin-top: 200px;
+}
+
+#descriptionBox{
+    width: 50vw;
+    color: white;
+    border-radius: 30px;
+    text-align: center;
+    font-size: x-large;
+    background-color: rgba(39, 41, 58, 0.5);
+    padding: 15px;
+}
+
+#footer{
+    text-align: right;
+    margin-right: 18vw;
+    font-size:larger;
+    
+}
+
+#myButton{
+    height:auto;
+}
+
+#teamButton{
+    height:auto;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    /* Initial size of the circle */
+    width: 5px;
+    height: 5px;
+    /* Animation */
+    transform: scale(0);
+    animation: growFade 1s forwards; /* Adjust time as needed */
+    z-index: -1;
+}
+
+@keyframes growFade {
+    to {
+        transform: scale(4); /* Adjust scaling as needed */
+        opacity: 0;
+    }
+}
+
+#siteInfo{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100vw;
+}
+
+

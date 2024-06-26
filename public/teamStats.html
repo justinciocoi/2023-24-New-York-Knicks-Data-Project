@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Styling/styles.css">
+    <link rel="stylesheet" href="Styling/imports.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <title>Player Logs</title>
+</head>
+<body>
+    <div id="nbaBackground" class="backgroundLogo">
+        <img id="nbaLogo" src="Images/nba.png">
+    </div>
+    <a class="headerLink" href="index.html">Back to Home</a>
+    <h1 class="tableHeader">2023-2024 NBA Team Statistics</h1>
+    
+    <br>
+    
+<script>
+    window.onload = function() {
+        fetchTeamAverages();
+    };
+</script>
+
+    <hr>
+    <br>
+    <div class="tableResponsive">
+        <table id="teamsAveragesTable">
+            <thead>
+                <tr>
+                    <th>Team</th>
+                    <th>Wins</th>
+                    <th>Losses</th>
+                    <th>ConfRank</th>
+                    <th>DivRank</th>
+                    <th>ORTG</th>
+                    <th>DRTG</th>
+                    <th>FG%</th>
+                    <th>FGM</th>
+                    <th>3P%</th>
+                    <th>3PM</th>
+                    <th>FT%</th>
+                    <th>FTM</th>
+                    <th>APG</th>
+                    <th>RPG</th>
+                    <th>TOPG</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Log entries will be inserted here -->
+            </tbody>
+        </table>
+    </div>
+
+
+<br>
+<hr>
+<br>
+    
+    <div id="footer">
+        <a class="footerLink" href="mailto:justinciocoi@gmail.com">E-Mail</a>
+        <br>
+        <a class="footerLink" href="https://jciocoi.com">Portfolio</a>
+    </div>
+    
+    <script src="Function/stats.js"></script>
+    <script src="Function/tableInitialization.js"></script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <div id="teamName" data-name="" ></div>
+    <link rel="stylesheet" href="../Styling/styles.css">
+    <link rel="stylesheet" href="../Styling/imports.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle"></title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+    <script>
+        window.onload = function() {
+
+        const teamName = `Celtics`;
+        const teamCity = `Boston`;
+        const teamImagePath = `../teamImages/${teamName}.png`;
+        const fullName = teamCity + ' ' + teamName;
+         
+        document.getElementById('team').innerText = teamName;
+        document.getElementById('teamCity').innerText = teamCity;
+        document.getElementById('teamCaption').innerText = teamName;
+        document.getElementById('teamCityCaption').innerText = teamCity;
+        document.getElementById('transparentLogo').src = teamImagePath;
+        document.getElementById('profileLogo').src = teamImagePath;
+        document.getElementById('teamName').setAttribute('data-name', teamName);
+        document.getElementById('pageTitle').innerText = fullName;
+
+
+        teamLogs();
+        oppLogs();
+        teamAvgsFromLogs();
+        oppAvgsFromLogs();
+        };
+    </script>
+</head>
+<body>
+    <br>
+    <a class="headerLink" href="../index.html">Back to Home</a>
+    <br>
+    <a class="headerLink" href="../teamSelect.html">Back to Team Select</a>
+    <br>
+    <hr class="header-hr">
+    <br>
+    <div id="background3">
+        <img class="teamLogo" id="transparentLogo" src="">
+    </div>
+    <div class="profileFlexContainer">
+        <div class="profileFlexItem" class="profileFlexDescription">
+            <h1 id="teamCityCaption" class="profileCaption"></h1>
+            <h1 id="teamCaption" class="profileCaption"></h1>
+        </div>
+        <div class="profileFlexItem" class="teamDateSelect">
+            <h2 class="centerHeader">Select Date Range:</h2>
+            <div>
+                <input class="date-input" type="date" id="startDate" placeholder="Start Date">
+                <input class="date-input" type="date" id="endDate" placeholder="End Date">
+            </div>
+            <br>
+            <div style="text-align:center;">
+                <button id="myButton" onclick=teamLogs();oppLogs()><b>Get Stats</b></button>
+            </div>
+        </div>
+        <div  class="profileFlexItem" class="profileLogo">
+            <img id="profileLogo" src="">
+        </div>      
+    </div>
+    <br>
+    <hr class="header-hr">
+    <br>
+    <div class="description-flex">
+        <div id="descriptionBox">
+            <div>
+                <div>This page contains game logs and averages for the
+                    <div class ="inlineBlock" id="teamCity"></div>
+                    <div class="inlineBlock" id="team"></div>
+                    as well as their opponents. You can specify a date range to limit
+                    the returned game logs as well as the games used in average calculation.
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <hr class="halfHR">
+    <br>
+    <div class="description-flex">
+        <div class="pageHyperlink">
+            <a  href="#teamAnchor">Go to Team Stats</a>
+            <br>
+            <br>
+            <a  href="#opponentAnchor">Go to Opponent Stats</a>
+        </div>
+    </div>
+    <br>
+    <br>
+    <h1 id="teamAnchor">Team Game Log</h1>
+    <div class="tableResponsive">
+        <table id="teamLogsTable">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Opponent</th>
+                    <th>Location</th>
+                    <th>Result</th>
+                    <th>PTS</th>
+                    <th>PTS Against</th>
+                    <th>FGM</th>
+                    <th>FG%</th>
+                    <th>3PM</th>
+                    <th>3P%</th>
+                    <th>FTM</th>
+                    <th>FT%</th>
+                    <th>ORB</th>
+                    <th>REB</th>
+                    <th>AST</th>
+                    <th>STL</th>
+                    <th>BLK</th>
+                    <th>TOV</th>
+                    <th>FLS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Log entries will be inserted here -->
+            </tbody>
+        </table>
+    </div>
+<br>
+<br>
+<h1>Team Averages</h1>
+<div class="tableResponsive">
+    <table id="teamLogAveragesTable">
+        <thead>
+            <tr>
+                <th>PTS</th>
+                <th>PTS Against</th>
+                <th>FGM</th>
+                <th>FG%</th>
+                <th>3PM</th>
+                <th>3P%</th>
+                <th>FTM</th>
+                <th>FT%</th>
+                <th>ORB</th>
+                <th>REB</th>
+                <th>AST</th>
+                <th>STL</th>
+                <th>BLK</th>
+                <th>TOV</th>
+                <th>FLS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Log entries will be inserted here -->
+        </tbody>
+    </table>
+</div>
+<hr>
+<br>
+<h1 id="opponentAnchor">Opponent Game Log</h1>
+   <div class="tableResponsive">
+    <table id="oppLogsTable">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Result</th>
+                <th>FGM</th>
+                <th>FG%</th>
+                <th>3PM</th>
+                <th>3P%</th>
+                <th>FTM</th>
+                <th>FT%</th>
+                <th>ORB</th>
+                <th>REB</th>
+                <th>AST</th>
+                <th>STL</th>
+                <th>BLK</th>
+                <th>TOV</th>
+                <th>FLS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Averages will be inserted here -->
+        </tbody>
+    </table>
+   </div>
+   <br>
+   <br>
+   <h1>Opponent Averages</h1>
+   <div class="tableResponsive">
+    <table id="oppLogAveragesTable">
+        <thead>
+            <tr>
+                <th>FGM</th>
+                <th>FG%</th>
+                <th>3PM</th>
+                <th>3P%</th>
+                <th>FTM</th>
+                <th>FT%</th>
+                <th>ORB</th>
+                <th>REB</th>
+                <th>AST</th>
+                <th>STL</th>
+                <th>BLK</th>
+                <th>TOV</th>
+                <th>FLS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Averages will be inserted here -->
+        </tbody>
+    </table>
+   </div>
+    <br>
+    <hr>
+    <div id="footer">
+        <a class="footerLink" href="mailto:justinciocoi@gmail.com">E-Mail</a>
+        <br>
+        <a class="footerLink" href="https://jciocoi.com">Portfolio</a>
+    </div>
+    <script src="../Function/stats.js"></script>
+    <script src="../Function/tableInitialization.js"></script>
+</body>
+</html>

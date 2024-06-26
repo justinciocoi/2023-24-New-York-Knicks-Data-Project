@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Visualization</title>
+    <link rel="stylesheet" href="../Styling/styles.css">
+    <link rel="stylesheet" href="../Styling/imports.css">
+</head>
+<body>
+    <br>
+    <a class="headerLink" href="../index.html">Back to Home</a>
+    <br>
+    <hr class="header-hr">
+    <div class="header-flex-container">
+        <div class="header-flex-item" id="header-flex-1"><b id="name">Justin Ciocoi</b><br>Software and Web Development<br>Data Science<br>Cybersecurity<br><b>New York, NY</b></div>
+        <div class="header-flex-item" id="header-flex-2"></div>
+        <div class="header-flex-item" id="header-flex-3"><img id="propic" src="../Images/logo.png"></div>
+    </div>
+    <hr class="header-hr">
+    <div id="background" class="backgroundLogo">
+        <img src="../Images/knicks.png">
+    </div>
+    <br>
+    <br>
+    <div class="description-flex">
+        <p id="descriptionBox">This page contains data visualizations made using MatLab. The data was extracted from the mySQL database using
+            mySQL Workbench and analyzed using MatLab through data visualization via graph creation and analysis of statistical significance. Each graph below will have an associated
+            description as well as a brief rundown of values that relate to statistical significance. 
+        </p>
+    </div>
+    <br>
+    <hr>
+
+    <div class="flex-box">
+        <div class="flex-item">
+            <img class="graphImage" src="/statImages/10Plus.png">
+        </div>
+        <div class="flex-item">
+            <img class="analysisImage" src="/statImages/10plus.jpg">
+        </div>
+        <div class="flex-item" id="graphDescription">
+            <br>
+            <p>This graph contains teams organized by wins and number of double digit scorers
+                <ul>
+                    <li>A linear regression model was performed and a line of best fit was added to the data</li>
+                    <li>While the R squared value is relatively low, a low p-value indicates that there is a statistical significance in this relationship</li>
+                    <li>These findings suggest that teams with fewer double digit scorers perform to a higher standard during the NBA regular season</li>
+                    <li>Some other factors that could impact this relationship include team chemistry, injury continuity, and age</li>
+                </ul>
+            </p>
+        </div>
+        
+    </div>
+    <hr>
+
+
+    <div class="flex-box">
+        <div class="flex-item">
+            <img class="graphImage" src="/statImages/proportion.png">
+        </div>
+        <div class="flex-item">
+            <img class="analysisImage" src="/statImages/Proportion.jpg">
+        </div>
+        <div class="flex-item" id="graphDescription">
+            <br>
+            <p>Description
+                <ul>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </p>
+        </div>
+        
+    </div>
+    <hr>
+
+
+    <div class="flex-box">
+        <div class="flex-item">
+            <img class="graphImage" src="/statImages/Unique.png">
+        </div>
+        <div class="flex-item">
+            <img class="analysisImage" src="/statImages/unique.jpg">
+        </div>
+        <div class="flex-item" id="graphDescription">
+            <br>
+            <p>Description
+                <ul>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </p>
+        </div>
+        
+    </div>
+    <hr>
+    <script src="../Function/mouseFollow.js"></script>
+</body>
+</html>

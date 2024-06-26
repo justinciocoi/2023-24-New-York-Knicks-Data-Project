@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../Styling/styles.css">
+    <link rel="stylesheet" href="../Styling/imports.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle"></title>
+    <div id="teamName" data-name=""></div>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+</head>
+<body>
+    <br>
+    <a class="headerLink" href="../index.html">Back to Home</a>
+    <br>
+    <a class="headerLink" href="../teamSelect2.html">Back to Team Select</a>
+    <br>
+    <hr class="header-hr">
+    <br>
+    <div id="background3">
+        <img class="teamLogo" id="transparentLogo" src="">
+    </div>
+    <div class="profileFlexContainer">
+        <div class="profileFlexItem" class="profileFlexDescription">
+            <h1 id="teamCityCaption" class="profileCaption"></h1>
+            <h1 id="teamCaption" class="profileCaption"></h1>
+        </div>
+        <div  class="profileFlexItem" class="profileLogo">
+            <img id="profileLogo" src="">
+        </div>      
+    </div>
+    <br>
+    <hr class="header-hr">
+    <br>
+    <div class="description-flex">
+        <div id="descriptionBox">
+            <div>
+                <div>This page contains player averages for the
+                    <div class ="inlineBlock" id="teamCity"></div>
+                    <div class="inlineBlock" id="team"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <br>
+    <div class="tableResponsive">
+        <table id="playerByTeamTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Games</th>
+                    <th>Games Started</th>
+                    <th>PPG</th>
+                    <th>APG</th>
+                    <th>RPG</th>
+                    <th>SPG</th>
+                    <th>BPG</th>
+                    <th>ORPG</th>
+                    <th>TOPG</th>
+                    <th>FG%</th>
+                    <th>FGM</th>
+                    <th>3P%</th>
+                    <th>3PM</th>
+                    <th>FT%</th>
+                    <th>FTM</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Log entries will be inserted here -->
+            </tbody>
+        </table>
+    </div>
+    <script>
+         window.onload = function() {
+
+        const teamName = `Rockets`;
+        const teamCity = `Houston`;
+        const teamImagePath = `../teamImages/${teamName}.png`;
+        const fullName = teamCity + ' ' + teamName;
+        
+        document.getElementById('team').innerText = teamName;
+        document.getElementById('teamCity').innerText = teamCity;
+        document.getElementById('teamCaption').innerText = teamName;
+        document.getElementById('teamCityCaption').innerText = teamCity;
+        document.getElementById('transparentLogo').src = teamImagePath;
+        document.getElementById('profileLogo').src = teamImagePath;
+        document.getElementById('teamName').setAttribute('data-name', teamName);
+        document.getElementById('pageTitle').innerText = fullName;
+
+        playerAvgsByTeam();
+        };
+    </script>
+    <script src="../Function/stats.js"></script>
+    <script src="../Function/tableInitialization.js"></script>
+</body>
+</html>
