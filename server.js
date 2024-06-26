@@ -1,12 +1,13 @@
 const express = require('express');
 const connect = require('./database');
 const app = express();
-const port = 3000;
+const PORT = process.env.PORT || 3000;
+const HOST = '0.0.0.0';
 
 app.use(express.static('public'));
 
-app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
+app.listen(PORT, HOST, () => {
+  console.log(`Server running at http://${HOST}:${port}`);
   console.log(`Dream Big.`);
 });
 
