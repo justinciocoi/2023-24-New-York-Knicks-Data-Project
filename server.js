@@ -33,7 +33,7 @@ app.get('/api/team-avgs', async (req, res) => {
       APG,
       RPG,
       TOPG
-      FROM team;`;
+      FROM Team;`;
     const [logs] = await connection.execute(individualQuery);
     res.json({ logs });
   } catch (error) {
@@ -72,7 +72,7 @@ app.get('/api/knicks-players/:lastName', async (req, res) => {
       ORB,
       TOV,
       plusMinus
-      FROM gamebyplayer WHERE lastName = ?
+      FROM GameByPlayer WHERE lastName = ?
       AND minutes IS NOT NULL`;
     const queryParams = [lastName];
 
@@ -114,7 +114,7 @@ app.get('/api/avgs-from-logs/:lastName', async (req, res) => {
       AVG(ORB) AS ORB,
       AVG(TOV) AS TOV,
       AVG(plusMinus) AS plusMinus
-      FROM gamebyplayer
+      FROM GameByPlayer
       WHERE lastName = ?
       AND minutes IS NOT NULL`;
 
@@ -161,7 +161,7 @@ app.get('/api/team-logs/:teamName', async (req, res) => {
     BLK,
     TOV,
     FLS
-    FROM gamebyteam WHERE teamName = ?`;
+    FROM GameByTeam WHERE teamName = ?`;
     const queryParams = [teamName];
 
     if(startDate && endDate){
@@ -199,7 +199,7 @@ app.get(`/api/opp-logs/:teamName`, async (req, res) => {
     oppBLK,
     oppTOV,
     oppFLS
-    FROM gamebyteam WHERE teamNAME = ?`;
+    FROM GameByTeam WHERE teamNAME = ?`;
     const queryParams = [teamName];
 
     if(startDate && endDate){
@@ -238,7 +238,7 @@ app.get(`/api/team-log-averages/:teamName`, async (req, res) => {
     AVG(BLK) AS BLK,
     AVG(TOV) AS TOV,
     AVG(FLS) AS FLS
-    FROM gamebyteam where teamName = ?`;
+    FROM GameByTeam where teamName = ?`;
     const queryParams = [teamName];
 
     if(startDate&&endDate){
@@ -276,7 +276,7 @@ app.get(`/api/opp-log-averages/:teamName`, async (req, res) => {
     AVG(oppBLK) AS BLK,
     AVG(oppTOV) AS TOV,
     AVG(oppFLS) AS FLS
-    FROM gamebyteam where teamName = ?`;
+    FROM GameByTeam where teamName = ?`;
     const queryParams = [teamName];
 
     if(startDate&&endDate){
@@ -318,7 +318,7 @@ app.get(`/api/team-player-stats/:teamName`, async (req, res) => {
     FT_Percent,
     FTM
     from player
-    WHERE team = ?`;
+    WHERE Team = ?`;
     const queryParams = [teamName];
 
 
