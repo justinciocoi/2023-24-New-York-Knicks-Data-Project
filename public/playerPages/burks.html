@@ -139,7 +139,8 @@
             const height = `6'5"`
             const weight = '214 lbs'
             const fullName = firstName + ` ` + lastName;
-            const playerImagePath = `../playerImages/${lastName}.png`;
+            const lowerCaseName = lastName.toLowerCase();
+            const playerImagePath = `../playerImages/${lowerCaseName}.png`;
 
             document.getElementById('playerImage').src = playerImagePath;
             document.getElementById('pageTitle').innerText = fullName;
