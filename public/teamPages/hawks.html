@@ -14,8 +14,9 @@
 
         const teamName = `Hawks`;
         const teamCity = `Atlanta`;
-        const teamImagePath = `../teamImages/${teamName}.png`;
         const fullName = teamCity + ' ' + teamName;
+        const lowerCaseName = teamName.toLowerCase();
+        const teamImagePath = `../teamImages/${lowerCaseName}.png`;
          
         document.getElementById('team').innerText = teamName;
         document.getElementById('teamCity').innerText = teamCity;
