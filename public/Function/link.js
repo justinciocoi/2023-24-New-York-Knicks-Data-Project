@@ -4,8 +4,8 @@ document.getElementById("statsButton").addEventListener("click", function() {
     window.location.href = "teamStats.html";
 });
 
-document.getElementById("findingsButton").addEventListener("click", function() {
-    window.location.href = "Findings/findings.html";
+document.getElementById("intentButton").addEventListener("click", function() {
+    window.location.href = "Findings/intent.html";
 });
 
 document.getElementById("aboutButton").addEventListener("click", function() {
@@ -16,8 +16,8 @@ document.getElementById("authorButton").addEventListener("click", function() {
     window.location.href = "About/author.html";
 });
 
-document.getElementById("visualizationButton").addEventListener("click", function() {
-    window.location.href = "Findings/dataVisual.html";
+document.getElementById("resultsButton").addEventListener("click", function() {
+    window.location.href = "Findings/results.html";
 });
 
 document.getElementById("playerStatsButton").addEventListener("click", function() {

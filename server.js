@@ -241,7 +241,7 @@ app.get(`/api/team-log-averages/:teamName`, async (req, res) => {
     FROM GameByTeam where teamName = ?`;
     const queryParams = [teamName];
 
-    if(startDate&&endDate){
+    if(startDate && endDate){
       avgsQuery+=` AND date BETWEEN ? AND ?`;
       queryParams.push(startDate, endDate);
     }
@@ -279,7 +279,7 @@ app.get(`/api/opp-log-averages/:teamName`, async (req, res) => {
     FROM GameByTeam where teamName = ?`;
     const queryParams = [teamName];
 
-    if(startDate&&endDate){
+    if(startDate && endDate){
       avgsQuery+=` AND date BETWEEN ? AND ?`;
       queryParams.push(startDate, endDate);
     }

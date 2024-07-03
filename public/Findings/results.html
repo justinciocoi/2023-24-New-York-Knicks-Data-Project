@@ -29,9 +29,15 @@
             description as well as a brief rundown of values that relate to statistical significance. 
         </p>
     </div>
+    <div class="help">
+        (Hover Images/Descriptions to Focus)
+    </div>
     <br>
     <hr>
-
+    <br>
+    <div class="sectionHeader">
+        Double-Digit Scorers
+    </div>
     <div class="flex-box">
         <div class="flex-item">
             <img class="graphImage" src="/statImages/10Plus.png">
@@ -47,14 +53,17 @@
                     <li>While the R squared value is relatively low, a low p-value indicates that there is a statistical significance in this relationship</li>
                     <li>These findings suggest that teams with fewer double digit scorers perform to a higher standard during the NBA regular season</li>
                     <li>Some other factors that could impact this relationship include team chemistry, injury continuity, and age</li>
+                    <li>It is important to note that a causal relationship was not found here, but the correlation indicates that this could affect other factors which, in turn, affect team success</li>
                 </ul>
             </p>
         </div>
         
     </div>
     <hr>
-
-
+    <br>
+    <div class="sectionHeader">
+        Proportion of Double-Digit Scorers Over 20 PPG
+    </div>
     <div class="flex-box">
         <div class="flex-item">
             <img class="graphImage" src="/statImages/proportion.png">
@@ -64,18 +73,22 @@
         </div>
         <div class="flex-item" id="graphDescription">
             <br>
-            <p>Description
+            <p>This graph looks at the proportion of a team's double digit scorers who average more than 20 points per game
                 <ul>
-                    <li></li>
-                    <li></li>
+                    <li>Again, a linear regression was performed and line of best fit added</li>
+                    <li>This analysis yielded similar results to the previous one, with low R-squared and p-values</li>
+                    <li>This suggests that teams with fewer, but higher volume scorers, may perform better</li>
+                    <li>Once again this relationship is not causal, but the correlation likely indicates some relationship</li>
                 </ul>
             </p>
         </div>
         
     </div>
     <hr>
-
-
+    <br>
+    <div class="sectionHeader">
+        Unique Players by Team
+    </div>
     <div class="flex-box">
         <div class="flex-item">
             <img class="graphImage" src="/statImages/Unique.png">
@@ -85,10 +98,11 @@
         </div>
         <div class="flex-item" id="graphDescription">
             <br>
-            <p>Description
+            <p>This graph looks at the number of unique players each team had throughout the course of the regular season
                 <ul>
-                    <li></li>
-                    <li></li>
+                    <li>The total number of unique players represents the continuity of a team's roster throughout the season</li>
+                    <li>This continuity might lead to team success, which led me to graph this relationship</li>
+                    <li>As expected, teams with fewer unique players were likely to perform better than those with more</li>
                 </ul>
             </p>
         </div>
@@ -96,5 +110,6 @@
     </div>
     <hr>
     <script src="../Function/mouseFollow.js"></script>
+    <script src="../Function/scaleDiv.js"></script>
 </body>
 </html>
