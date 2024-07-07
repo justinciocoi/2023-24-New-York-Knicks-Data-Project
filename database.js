@@ -4,8 +4,8 @@ async function connect() {
   try {
       const connection = await mysql.createConnection({
           host: 'database-1.c9g2kw26cjej.us-east-2.rds.amazonaws.com',
-          user: 'justin',
-          password: 'jman0617',
+          user: 'admin',
+          password: 'z3VsCJFsvbBdEUM0B4ud',
           database: 'database-1',
           port: 3306
       });
