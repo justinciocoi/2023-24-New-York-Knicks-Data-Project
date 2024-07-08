@@ -21,60 +21,90 @@
     <div id="background" class="backgroundLogo">
         <img src="../Images/knicks.png">
     </div>
-<div class="aboutSection">
-    <h1 class="aboutHeader">About the Data</h1>
-    <h2 class="aboutHeader">Data Sets</h2>
-    <p class="aboutText">
-        The data sets which are used in this project include the following:
-        <ul style="list-style: none; font-weight:bold;" class="aboutText">
-            <li>The 2023-2024 New York Knicks Player Game Logs and Averages</li>
-            <li>The 2023-2024 NBA Player Averages</li>
-            <li>The 2023-2024 NBA Team Stats</li>
-            <li>Public Opinion</li>
-        </ul>
-    <p class="aboutText">
-        These data sets are provivded through the data collections which are publically available at <a target=”_blank” href="https://www.basketball-reference.com/">Basketball Reference</a> by Stathead. 
-        They are taken by Basketball Reference from Sportradar, who are the official stats partner of the NBA. The Public Opinion dataset was collected through social media polling on Knicks and NBA fan forums.
-    </p>
-    <h2 class="aboutHeader">Data Collection</h2>
-    <p class="aboutText">
-        The data was collected directly via Basketball Reference. The site allows users to download .CSV files, which I then uploaded to a mySQL database such that they are accessible va the web.
-        mySQL Server and mySQL Workbench were used to set up this database. 
-    </p>
-</div>
-    <br>
-<div class="aboutSection">
-    <h1 class="aboutHeader">About the Analysis</h1>
-    <h2 class="aboutHeader">Methods</h2>
-    <h2 class="aboutHeader">Potential for Error</h2>
-</div>
-    <br>
-<div class="aboutSection">
-    <h1 class="aboutHeader">About the Site</h1>
-    <div id="siteInfo">
-        <h2 class="aboutHeader">Back End</h2>
-        <h2 class="aboutHeader">Front End</h2>
+
+    <div class="textPage">
+        <br>
+        <br>
+        <div class="sectionHeader">About the Data</div>
+        <br>
+        <div class="sectionText">
+            <h2 class="aboutHeader">Data Sets</h2>
+            <br>
+            The Data Sets used throughout this project include the following:
+            <div class="centralList">
+                <ul>
+                    <li>2023-2024 New York Knicks Players' Game Logs</li>
+                    <li>2023-2024 NBA Teams' Game Logs</li>
+                    <li>2023-2024 NBA Player Averages</li>
+                    <li>2023-2024 NBA Team Averages</li>
+                </ul>
+            </div>
+            <p>
+                These data sets are provivded through the data collections which are publically available at <a target=”_blank” href="https://www.basketball-reference.com/">Basketball Reference</a> by Stathead. 
+                They are taken by Basketball Reference from Sportradar, who are the official stats partner of the NBA.
+                <h2 class="aboutHeader">Data Collection</h2>
+                The data was collected directly via Basketball Reference. The site allows users to download .CSV files, which I then uploaded to a mySQL database such that they are accessible va the web.
+                mySQL Server and mySQL Workbench were used to set up this database.
+            </p>
+        </div>
+        
+        <br>
+        <br>
+        <br>
+        <div class="sectionHeader">About the Analysis</div>
+        <br>
+        <div class="sectionText">
+            <h2 class="aboutHeader">Methods</h2>
+            <br>
+            Data analysis was done mainly using MatLab. 
+            <p>
+                Temporary views were created by executing MySQL statements in my database. Afterwards, those temporary views were downloaded
+                and imported into MatLab. There, the data was plotted and I conducted linear regression analyses to analyze the relationships present.
+                <h2 class="aboutHeader">Potential for Error</h2>
+                There is potential for error from a variety of sources, including:
+                <div class="centralList">
+                    <ul>
+                        <li>Incorrect stat-tracking by official stat trackers</li>
+                        <li>Improper or unanticipated rounding of floating point values by MySQL Server</li>
+                        <li>User error in data migration or analysis</li>
+                    </ul>
+                </div>
+            </p>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <div class="sectionHeader">About the Site</div>
+        <br>
+        <div class="sectionText">
+            <h2 class="aboutHeader">Front-End</h2>
+            <br>
+            The site's front-end is a custom built webpage that uses a few third party libraries for GUI support 
+            <p>
+                The site is comprised exclusively of HTML, CSS, and JavaScript, with the CDN DataTables library used for table visualization
+                <h2 class="aboutHeader">Back-End</h2>
+                This site is a Node.JS site and uses a few node modules on the back-end, including:
+                <div class="centralList">
+                    <ul>
+                        <li>Express, for web-server capabilities</li>
+                        <li>MySQL2, for accessing a remote MySQL database</li>
+                    </ul>
+                </div>
+                The MySQL database is hosted on an AWS RDBMS instance
+            </p>
+        </div>
+        
     </div>
-</div>
     <br>
-<div class="aboutSection">
-    <h1 class="aboutHeader">About the Author</h1>
-</div>
-<div id="aboutMe">
-
-</div>
-
-
-<br>
+    <hr>
+    <br>
     
-<hr>
 
-<br>
-
-<div id="footer">
-    <a class="footerLink" href="mailto:justinciocoi@gmail.com">E-Mail</a>
-    <br>
-    <a class="footerLink" href="https://jciocoi.com">Portfolio</a>
-</div>
+    <div id="footer">
+        <a class="footerLink" href="mailto:justinciocoi@gmail.com">E-Mail</a>
+        <br>
+        <a class="footerLink" href="https://jciocoi.com">Portfolio</a>
+    </div>
 </body>
 </html>
