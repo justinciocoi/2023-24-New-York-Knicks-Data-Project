@@ -3,11 +3,11 @@ const mysql = require('mysql2/promise');
 async function connect() {
   try {
       const connection = await mysql.createConnection({
-          host: 'database-1.c9g2kw26cjej.us-east-2.rds.amazonaws.com',
-          user: 'justin',
-          password: 'jman0617',
-          database: 'NBA_Stats',
-          port: 3306
+          host: process.env.DB_HOST,
+          user: process.env.DB_USER,
+          password: process.env.DB_CREDENTIAL,
+          database: process.env.DB_SCHEMA,
+          port: process.env.DB_PORT
       });
       console.log("Connected to the database!");
       return connection;
