@@ -1,8 +1,11 @@
+//Justin Ciocoi
+
 const mysql = require('mysql2/promise');
 
 async function connect() {
   try {
       const connection = await mysql.createConnection({
+          //ALWAYS use environment variables to maintain database security
           host: process.env.DB_HOST,
           user: process.env.DB_USER,
           password: process.env.DB_CREDENTIAL,
